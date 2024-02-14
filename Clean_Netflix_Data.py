@@ -5,11 +5,11 @@ import matplotlib.pyplot as plt
 # Start coding!
 
 # Load the CSV file as netflix_df
-netflix_df = pd.read_csv("netflix_data.csv")
-print(netflix_df.head())
+netflix_dataframe = pd.read_csv("netflix_data.csv")
+print(netflix_dataframe.head())
 
 # Filter the data to remove TV shows as netflix_subset
-netflix_subset = netflix_df[netflix_df['type'] == 'Movie']
+netflix_subset = netflix_dataframe[netflix_dataframe['type'] == 'Movie']
 
 # Create a DataFrame as netflix_movies
 netflix_movies = netflix_subset[["title", "country", "genre", "release_year", "duration"]]
@@ -30,9 +30,11 @@ for index, row in netflix_movies.iterrows():
     else:
         colors.append("grey")
 
+
 # Create Scatter Plot
 fig, ax = plt.subplots()
 ax.scatter(netflix_movies["release_year"], netflix_movies["duration"], c=colors)
+
 
 # Set plot labels and title
 ax.set_xlabel('Release year')  # Corrected from set_xlabels to set_xlabel
