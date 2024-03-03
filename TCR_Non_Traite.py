@@ -35,10 +35,11 @@ data.drop_duplicates(inplace=True)
 
 df['B'] = df['B'].astype(int)
 '''
-
-# Create an instance of LabelEncoder
+'''
+ # Create an instance of LabelEncoder
 le = LabelEncoder()
 
 # Fit and transform the categorical data
 data['Pole_Num'] = le.fit_transform(data['Pole'])
 data['A_TCR_Num'] = le.fit_transform(data['Agrégat_TCR'])
+'''
