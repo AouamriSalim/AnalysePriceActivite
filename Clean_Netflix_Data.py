@@ -42,4 +42,4 @@ ax.set_ylabel('Duration (min)')  # Corrected from set_ylabels to set_ylabel
 ax.set_title('Movie Duration by Year of Release')
 
 # Display the plot
-#plt.show()
+plt.show()
