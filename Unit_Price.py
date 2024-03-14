@@ -17,4 +17,4 @@ random_samples = df.groupby('ACTIVITE').apply(lambda x: x.sample(sample_size)).r
 descriptive_stats = random_samples.groupby('ACTIVITE')['prix_unitaire'].agg(['mean', 'median', lambda x: x.mode().iloc[0]]).reset_index()
 descriptive_stats.columns = ['ACTIVITE', 'mean', 'median', 'mode']
 
-print(descriptive_stats)
+#print(descriptive_stats)
