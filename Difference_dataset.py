@@ -48,7 +48,7 @@ excel_data = pd.read_excel('TYPE.xlsx')
 
 
 # Strip whitespace and convert to lowercase
-# #Extract 'TYPE', 'LIBELLE', and 'Marque' columns from Excel data
+# Extract 'TYPE', 'LIBELLE', and 'Marque' columns from Excel data
 #excel_data[['TYPE', 'LIBELLE', 'Marque']] = excel_data[['TYPE', 'LIBELLE', 'Marque']].apply(lambda x: x.str.strip().str.lower())
 excel_data = excel_data['TYPE'].str.strip().str.lower()
 sql_data = sql_data['TYPE'].str.strip().str.lower()
